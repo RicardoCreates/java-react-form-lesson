@@ -10,7 +10,7 @@ function App() {
         { name: string; age?: number; email: string }[]
     >([]);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    function handleSubmit(e: React.FormEvent): void {
         e.preventDefault();
         // Füge neue Daten zum bestehenden Array hinzu
         setSubmittedData(prevData => [
@@ -21,7 +21,8 @@ function App() {
         setNameInput('');
         setAgeInput(undefined);
         setEmailInput('');
-    };
+    }
+
 
     return (
         <>
